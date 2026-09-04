@@ -130,3 +130,40 @@ footer .footer-inner{grid-template-columns:1fr auto}.footer-links{justify-self:s
   .contact-text small{font-size:11px}
   .wordmark{font-size:20px;line-height:.82;letter-spacing:-1px}
 }
+
+/* ===== Strong VINOTH KUMAR orange sweep ===== */
+.wordmark{
+  position:relative;
+  display:inline-block;
+  color:var(--ink)!important;
+  -webkit-text-fill-color:var(--ink)!important;
+  background:none!important;
+  animation:none!important;
+  filter:none!important;
+}
+.wordmark::before,.wordmark::after{
+  position:absolute;
+  left:0;
+  z-index:2;
+  overflow:hidden;
+  white-space:nowrap;
+  width:100%;
+  color:var(--orange);
+  -webkit-text-fill-color:var(--orange);
+  pointer-events:none;
+  clip-path:inset(0 100% 0 0);
+  text-shadow:0 0 10px rgba(255,78,18,.2);
+}
+.wordmark::before{content:"VINOTH";top:0;animation:vinothOrange 4s linear infinite}
+.wordmark::after{content:"KUMAR";top:.82em;animation:kumarOrange 4s linear infinite}
+@keyframes vinothOrange{
+  0%,7%{clip-path:inset(0 100% 0 0)}
+  34%,55%{clip-path:inset(0 0 0 0)}
+  56%,100%{clip-path:inset(0 100% 0 0)}
+}
+@keyframes kumarOrange{
+  0%,34%{clip-path:inset(0 100% 0 0)}
+  62%,80%{clip-path:inset(0 0 0 0)}
+  81%,100%{clip-path:inset(0 100% 0 0)}
+}
+@media(prefers-reduced-motion:reduce){.wordmark::before,.wordmark::after{animation:none;clip-path:inset(0 100% 0 0)}}
